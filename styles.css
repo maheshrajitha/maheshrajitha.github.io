@@ -1,0 +1,97 @@
+html,body{
+    height: 100%;
+    widows: 100%;
+}
+.cover-area{
+    height: 200px;
+    min-width: 100%;
+    background-color: black;
+    background-image: url(./cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.profile-name{
+    margin-left: 250px;
+    text-shadow: 2px 2px rgb(170, 152, 152);
+    color: rgb(44, 50, 61);
+}
+.social-media-icon-container{
+    height: 200px;
+    margin-top: 120px;
+}
+.profile-picture{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 2px 2px 2px  gray;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.profile-area{
+    min-height: 400px;
+    min-width: 100%;
+}
+
+/* .main-container{
+    margin-top: 120px;
+} */
+
+.border-round{
+    border-radius: 20px;
+}
+.shadow {
+    box-shadow: rgb(170, 152, 152) 5px 5px 5px;
+}
+.fb{
+    transition: 1s;
+    color: #3b5998;
+    box-shadow: rgb(170, 152, 152) 5px 5px 5px;
+    border-radius: 50%;
+    border: solid 5px #3b5998;
+}
+.fb:hover{
+    transition: 1s;
+    color: #3b5998;
+    box-shadow: rgb(170, 152, 152) 0px 0px 0px;
+    border-radius: 50%;
+    border: solid 5px #3b5998;
+}
+.github {
+    transition: 1s;
+    color: #F1502F;
+    box-shadow: rgb(170, 152, 152) 5px 5px 5px;
+    border-radius: 50%;
+    border: solid 5px #F1502F;
+}
+.github:hover {
+    transition: 1s;
+    color: #F1502F;
+    box-shadow: rgb(170, 152, 152) 0px 0px 0px;
+    border-radius: 50%;
+    border: solid 5px #F1502F;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* STYLES GO HERE */
+    .profile-picture{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow: 2px 2px 2px gray;
+        margin-top: 100px;
+        margin-left: 20vw;
+    }
+    .profile-name{
+        margin-top: 150px;
+        margin-left: 0px;
+        font-size: 20px;
+        text-align: center;
+        color: rgb(44, 50, 61);
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* STYLES GO HERE */
+}
