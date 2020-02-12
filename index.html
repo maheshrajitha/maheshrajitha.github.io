@@ -11,7 +11,10 @@
     <title>Mahesh Rajitha Bandara</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div id="preLoaderContainer" class="d-flex justify-content-center h-100 align-items-center">
+        <div id="preLoader" class="loader"></div>
+    </div>
+    <div id="mainContent" class="container-fluid d-none">
         <div class="cover-area">
             <img src="propic_mahesh.jpg" class="img-fluid profile-picture" alt="Mahesh_Rajitha_Bandara">
         </div>
@@ -25,8 +28,8 @@
         <div class="row main-container">
             <div class="col-md-4">
                 <div class="card mb-5 border-round shadow">
-                    <div class="card-header bg-primary font-weight-bold ">
-                        Basic Information
+                    <div class="card-header bg-primary font-weight-bold text-center">
+                        <i class="fas fa-info-circle"></i> &nbsp;&nbsp; Basic Information
                     </div>
                     <div class="card-body">
                         <div class="font-weight-light mt-3">
@@ -35,7 +38,15 @@
                         </div>
                         <div class="font-weight-light mt-3">
                             <i class="fas fa-map-marker-alt text-muted"></i>
-                            &nbsp; &nbsp; Form <strong class="font-weight-bold">Elapatha,Sri Lanka</strong>
+                            &nbsp; &nbsp; From <strong class="font-weight-bold">Elapatha,Sri Lanka</strong>
+                        </div>
+                        <div class="font-weight-light mt-3">
+                            <i class="fas fa-phone text-muted"></i>
+                            &nbsp; &nbsp; <strong class="font-weight-bold">+94718958204</strong>
+                        </div>
+                        <div class="font-weight-light mt-3">
+                            <i class="fas fa-envelope text-muted"></i>
+                            &nbsp; &nbsp; <strong class="font-weight-bold">shadowmaheshr@gmail.com</strong>
                         </div>
                     </div>
                 </div>
@@ -76,5 +87,30 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+    $(window).on('load',function(){
+        let h1Element = document.getElementById("preLoader");
+        let mainContent = document.getElementById("mainContent");
+        let increment = 1;
+        let interval = setInterval(() => {
+            increment++;
+            //h1Element.innerText = increment;
+            if (increment === 100) { mainContent.classList.remove("d-none"); h1Element.className = "d-none"; document.getElementById('preLoaderContainer').className = "d-none"; clearInterval(interval); }
+        }, 50);
+    });
+    // function changeVal() {
+    //     let h1Element = document.getElementById("numberIncrement");
+    //     let mainContent = document.getElementById("mainContent");
+    //     let increment = 1;
+    //     let interval = setInterval(() => {
+    //         increment++;
+    //         //h1Element.innerText = increment;
+    //         if (increment === 100) { mainContent.classList.remove("no-display"); h1Element.className += "no-display"; document.getElementById('h1ElementContainer').className += "no-display"; clearInterval(interval); }
+    //     }, 50);
+    //     // setTimeout(()=>{
+    //     //     clearInterval(interval);
+    //     // },10_000);
+    // }
+</script>
 </body>
 </html>

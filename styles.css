@@ -1,6 +1,6 @@
 html,body{
     height: 100%;
-    widows: 100%;
+    width: 100%;
 }
 .cover-area{
     height: 200px;
@@ -70,6 +70,26 @@ html,body{
     box-shadow: rgb(170, 152, 152) 0px 0px 0px;
     border-radius: 50%;
     border: solid 5px #F1502F;
+}
+.loader {
+    border: 16px solid #8790ad;
+    /* Light grey */
+    border-top: 16px solid #375061;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* STYLES GO HERE */
